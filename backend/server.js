@@ -21,3 +21,10 @@ mongoose.connect(
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
+const savingsGoalRouter = require('./routes/savingsGoal');
+const dailySavingsRouter = require('./routes/dailySavings');
+const usersRouter = require('./routes/users');
+
+app.use('/dailySavings', dailySavingsRouter);
+app.use('/savingsGoal', savingsGoalRouter);
+app.use('/users', usersRouter);
