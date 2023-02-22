@@ -1,9 +1,9 @@
 const router = require('express').Router();
-let savingsGoal = require('../models/savingsGoal.model');
+let dailySavings = require('../models/dailySavings.model');
 
 router.route('/').get((req, res) => {
-  savingsGoal.find()
-    .then(savingsGoal => res.json(savingsGoal))
+  dailySavings.find()
+    .then(dailySavings => res.json(dailySavings))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -13,15 +13,15 @@ router.route('/add').post((req, res) => {
   const dailySavings = Number(req.body.dailySavings);
   const goalDate = Date.parse(req.body.goalDate);
 
-  const newSavingsGoal = new savingsGoal({
+  const newdailySavings = new dailySavings({
     goalName,
     goalAmount,
     dailySavings,
     goalDate,
   });
 
-  newSavingsGoal.save()
-  .then(() => res.json('New Savings Goal added!'))
+  newdailySavings.save()
+  .then(() => res.json('New Daily Savings total added!'))
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
