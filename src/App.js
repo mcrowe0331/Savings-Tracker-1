@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from "./components/navbar.component"
-import SavingsList from "./components/savings-list.component"
-import EditSaving from "./components/edit-savings.component"
-import CreateSaving from "./components/create-saving.component"
-import CreateUser from "./components/create-user.component"
+import CreditList from './components/credit-list.component';
+import EditCredit from './components/edit-credit.component';
+import CreateCredit from './components/create-credit.component';
+import CreateUser from './components/create-user.component';
 
- 
+
 function App() {
   return (
     <Router>
@@ -16,14 +16,14 @@ function App() {
     <Navbar />
     <br/>
     <Routes>
-      <Route path="/" exact element={<SavingsList/>} />
-      <Route path="/edit/:id" element={<EditSaving/>} />
-      <Route path="/create" element={<CreateSaving/>} />
+      <Route path="/" exact element={<CreditList/>} />
+      <Route path="/edit/:id" element={<EditCredit/>} />
+      <Route path="/create" element={<CreateCredit/>} />
       <Route path="/user" element={<CreateUser/>} />
     </Routes>
     </div>
     </Router>
   );
 }
- 
+
 export default App;
