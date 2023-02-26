@@ -19,12 +19,10 @@ mongoose.connect(
   );
 
 
-const savingsGoalRouter = require('./routes/savingsGoal');
-const dailySavingsRouter = require('./routes/dailySavings');
+const creditRouter = require('./routes/credit');
 const usersRouter = require('./routes/users');
 
-app.use('/dailySavings', dailySavingsRouter);
-app.use('/savingsGoal', savingsGoalRouter);
+app.use('/credit', creditRouter);
 app.use('/users', usersRouter);
 
 app.listen(port, () => {
