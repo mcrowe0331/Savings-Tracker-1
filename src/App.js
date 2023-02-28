@@ -12,16 +12,13 @@ import CreateUser from './components/create-user.component';
 function App() {
   return (
     <Router>
-    <div className="App">
-    <Navbar />
-    <br/>
-    <Routes>
-      <Route path="/" exact element={<CreditList/>} />
-      <Route path="/edit/:id" element={<EditCredit/>} />
-      <Route path="/create" element={<CreateCredit/>} />
-      <Route path="/user" element={<CreateUser/>} />
-    </Routes>
-    </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<CreditList />} />
+        <Route path="/edit/:id" element={<EditCredit />} />
+        <Route path="/create" element={<CreateCredit />} />
+        <Route path="/user" element={<CreateUser />} />
+      </Routes>
     </Router>
   );
 }

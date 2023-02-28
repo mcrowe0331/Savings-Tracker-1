@@ -1,68 +1,68 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Credit = props => (
+const Credit = ({ credit, deleteCredit }) => (
   <tr>
-    <td>{props.credit.username}</td>
-    <td>{props.credit.description}</td>
-    <td>{props.credit.amount}</td>
-    <td>{props.credit.date.substring(0,10)}</td>
+    <td>{credit.username}</td>
+    <td>{credit.description}</td>
+    <td>{credit.amount}</td>
+    <td>{credit.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.credit._id}>edit</Link> | <a href="#" onClick={() => { props.deleteCredit(props.credit._id) }}>delete</a>
+      <Link to={`/edit/${credit._id}`}>Edit</Link> | <a href="#" onClick={() => { deleteCredit(credit._id) }}>Delete</a>
     </td>
   </tr>
 )
-export default class CreditList extends Component {
-  constructor(props) {
-    super(props);
-    this.deleteCredit = this.deleteCredit.bind(this);
-    this.state = {credit: []};
-  }
 
-  componentDidMount() {
+const CreditList = () => {
+  const [credit, setCredit] = useState([]);
+
+  useEffect(() => {
     axios.get('http://localhost:5000/credit/')
      .then(response => {
-       this.setState({ credit: response.data });
+       setCredit(response.data);
      })
      .catch((error) => {
         console.log(error);
      })
-  }
+  }, []);
 
-  deleteCredit(id) {
-    axios.delete('http://localhost:5000/credit/'+id)
+  const deleteCredit = (id) => {
+    axios.delete(`http://localhost:5000/credit/${id}`)
       .then(res => console.log(res.data));
-    this.setState({
-      credit: this.state.credit.filter(el => el._id !== id)
+    setCredit(credit.filter(el => el._id !== id))
+  }
+
+  const creditList = () => {
+    return credit.map(currentcredit => {
+      return <Credit credit={currentcredit} deleteCredit={deleteCredit} key={currentcredit._id}/>;
     })
   }
 
-  creditList() {
-    return this.state.credit.map(currentcredit => {
-      return <Credit credit={currentcredit} deleteCredit={this.deleteCredit} key={currentcredit._id}/>;
-    })
-  }
-
-  render() {
-    return (
-       <div>
-  <h3>Logged Credits</h3>
-  <table className="table">
-    <thead className="thead-light">
-      <tr>
-        <th>Username</th>
-        <th>Description</th>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      { this.creditList() }
-    </tbody>
-  </table>
-  </div> 
+  return (
+    <div>
+      <h3>Logged Credit</h3>
+      <table className="table">
+        <thead className="thead-light">
+          <tr>
+            <th>Username</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          { creditList() }
+        </tbody>
+      </table>
+      <div> 
+        <center>
+            <img src="/gitfitbanner.png" width="800" alt=""></img>
+        </center>
+      </div>
+    </div>
   )
 }
-}
+
+export default CreditList;
