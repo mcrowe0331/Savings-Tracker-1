@@ -8,6 +8,7 @@ import CreateCredit from './/components/create-credit.component';
 import CreateUser from './/components/create-user.component';
 import Home from ".//pages/homepage/home";
 import Login from ".//pages/login/login";
+import Register from ".//pages/register/register";
 import { Context } from ".//context/Context";
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="./EditCredit" element={<EditCredit />} />
         <Route path="./create-user" element={<CreateUser />} />
         <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/register" element={user ? <Home /> : <Register />} />
 
       </Routes>
     </Router>

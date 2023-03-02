@@ -1,5 +1,13 @@
 const router = require('express').Router();
+
+
+
 let Credit = require('../models/credit.model');
+  router.route('/').get((req, res) => {
+    Credit.find()
+      .then(credit => res.json(credit))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
 
 router.route('/').get((req, res) => {
   Credit.find()
