@@ -1,5 +1,6 @@
+// import axios from "axios";
+import { Link } from "react-router-dom";
 
-import "./home.css";
 
 
 export default function Home() {
@@ -8,6 +9,12 @@ export default function Home() {
     <div className="homepage">
       
         <div className="home">
+          <h1>This is the homepage</h1>
+          <button className="loginButton">
+          <Link className="link" to="/login">
+            Login
+          </Link>
+        </button>
           
         </div>
       </div>
