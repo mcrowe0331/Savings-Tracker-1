@@ -26,9 +26,9 @@ mongoose.connect(
   );
 
 
-app.use('/backend/credit', creditRouter);
-app.use('/backend/users', usersRouter);
-app.use("/backend/auth", authRouter);
+app.use('/credit', creditRouter);
+app.use('/users', usersRouter);
+app.use("/auth", authRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
