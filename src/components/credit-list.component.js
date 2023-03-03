@@ -56,11 +56,6 @@ const CreditList = () => {
           { creditList() }
         </tbody>
       </table>
-      <div> 
-        <center>
-            <img src="/gitfitbanner.png" width="800" alt=""></img>
-        </center>
-      </div>
     </div>
   )
 }

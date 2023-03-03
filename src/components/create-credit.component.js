@@ -59,7 +59,7 @@ const CreateCredit = () => {
 
   return (
     <div>
-      <h3>Create New Credit Log</h3>
+      <h3>Create New Credit</h3>
       <form onSubmit={onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
@@ -108,11 +108,6 @@ const CreateCredit = () => {
           <input type="submit" value="Create Credit Log" className="btn btn-primary" />
         </div>
       </form>
-      <div> 
-        <center>
-            <img src="/gitfitbanner.png" width="800" alt=""></img>
-        </center>
-      </div>
     </div>
   )
 }
