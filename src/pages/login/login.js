@@ -24,13 +24,15 @@ export default function Login() {
     }
   };
   return (
-    <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
+    <div className="form-group container">
+      <br/>
+      <br/>
+      <span><h2>Login</h2></span>
+      <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input
           type="text"
-          className="loginInput"
+          className="form-control"
           placeholder="Enter Your username"
           autoFocus={true}
           ref={userRef}
@@ -38,18 +40,16 @@ export default function Login() {
         <label>Password</label>
         <input
           type="password"
-          className="loginInput"
+          className="form-control"
           placeholder="Enter Your Password"
           ref={passwordRef}
         />
+        <br/>
+        <center>
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
-        <button className="loginRegisterButton">
-          <Link className="link" to="/register">
-            Register
-          </Link>
-        </button>
+        </center>
       </form>
     </div>
     

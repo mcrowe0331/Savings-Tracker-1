@@ -4,7 +4,7 @@
 This is an app for restaurants to track customer credits to customer accounts.
 
 # Demo
-![Screenshot](./public/Screenshot.png)
+![Screenshot](./public/gitcredit.png)
 
 # Technologies
 Front end:
