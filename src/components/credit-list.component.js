@@ -41,7 +41,9 @@ const CreditList = () => {
 
   return (
     <div>
-      <h3>Logged Credit</h3>
+      <br/>
+      <br/>
+      <h3>Logged Credits</h3>
       <table className="table">
         <thead className="thead-light">
           <tr>

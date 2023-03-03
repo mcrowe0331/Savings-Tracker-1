@@ -31,9 +31,9 @@ const Navbar = () => {
                   REGISTER
                 </Link>
               </li>
-              <li className="topListItem" onClick={handleLogout}>
-            {user && "LOGOUT"}
-          </li>
+              <li className="topListItem" onClick=      {handleLogout}>LOG OUT
+                {user && "LOGOUT"}
+              </li>
             </ul>
           </>
         )}

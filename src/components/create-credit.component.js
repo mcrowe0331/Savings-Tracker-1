@@ -103,10 +103,12 @@ const CreateCredit = () => {
             onChange={onChangeDate}
           />
         </div>
-  
+        <br/>
         <div className="form-group">
           <input type="submit" value="Create Credit Log" className="btn btn-primary" />
         </div>
+        <br/>
+        <br/>
       </form>
     </div>
   )
