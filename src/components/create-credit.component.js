@@ -59,7 +59,7 @@ const CreateCredit = () => {
 
   return (
     <div>
-      <h3>Create New Credit Log</h3>
+      <h3>Create New Credit</h3>
       <form onSubmit={onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
