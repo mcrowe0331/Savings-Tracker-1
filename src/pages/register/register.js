@@ -1,5 +1,4 @@
 import "./register.css";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -34,7 +33,7 @@ export default function Register() {
         <input
           type="text"
           className="form-control"
-          placeholder="Enter Your username"
+          placeholder="Enter Your Username"
           autoFocus={true}
           onChange={(e) => setUsername(e.target.value)}
         />
@@ -42,7 +41,7 @@ export default function Register() {
         <input
           type="text"
           className="form-control"
-          placeholder="Enter Your email"
+          placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>

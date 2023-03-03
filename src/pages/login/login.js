@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useRef, useContext } from "react";
-import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.css";
 
@@ -33,7 +32,7 @@ export default function Login() {
         <input
           type="text"
           className="form-control"
-          placeholder="Enter Your username"
+          placeholder="Enter Your Username"
           autoFocus={true}
           ref={userRef}
         />

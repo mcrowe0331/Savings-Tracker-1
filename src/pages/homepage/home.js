@@ -6,9 +6,9 @@ import CreateCredit from "../../components/create-credit.component"
 export default function Home() {
   
   return (
-    <div className="homepage">
+    <div className="container">
       
-        <div className="home">
+        <div>
         <CreditList />
         <br/>
         <br/>
