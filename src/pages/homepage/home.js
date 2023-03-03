@@ -4,6 +4,7 @@ import "./home.css";
 import axios from "axios";
 import CreditList from "../../components/credit-list.component";
 import CreateCredit from "../../components/create-credit.component"
+import CreateUser from "../../components/create-user.component"
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
         <div className="home">
         <CreditList />
         <CreateCredit />
+        <CreateUser />
           <button className="loginButton">
           <Link className="link" to="/login">
             Login
