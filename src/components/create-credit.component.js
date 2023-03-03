@@ -108,11 +108,6 @@ const CreateCredit = () => {
           <input type="submit" value="Create Credit Log" className="btn btn-primary" />
         </div>
       </form>
-      <div> 
-        <center>
-            <img src="/gitfitbanner.png" width="800" alt=""></img>
-        </center>
-      </div>
     </div>
   )
 }
