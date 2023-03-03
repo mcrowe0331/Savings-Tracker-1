@@ -41,3 +41,4 @@ Back end:
 # Issues
 1. login and registration works in the back end, but not in the front end.
 2. The client can see their logged credits and create new credits without logging in. We were trying to route the client to their logged credits and create new credits after successful login. However the login and registration pages do not work, so instead we have the information on the homepage for now.
+3. The logout button isn't linking so the client can't logout.
