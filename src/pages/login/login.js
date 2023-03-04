@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useRef, useContext } from "react";
-import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.css";
 
@@ -18,38 +17,40 @@ export default function Login() {
         password: passwordRef.current.value,
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      window.location.href = '/creditlist';
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
     }
   };
   return (
-    <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
+    <div className="form-group container">
+      <br/>
+      <br/>
+      <span><h2>Login</h2></span>
+      <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input
           type="text"
-          className="loginInput"
-          placeholder="Enter Your username"
+          className="form-control"
+          placeholder="Enter Your Username"
           autoFocus={true}
           ref={userRef}
         />
         <label>Password</label>
         <input
           type="password"
-          className="loginInput"
+          className="form-control"
           placeholder="Enter Your Password"
           ref={passwordRef}
         />
+        <br/>
+        <center>
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
-        <button className="loginRegisterButton">
-          <Link className="link" to="/register">
-            Register
-          </Link>
-        </button>
+        </center>
       </form>
     </div>
+    
   );
 }

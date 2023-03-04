@@ -1,5 +1,4 @@
 import "./register.css";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -25,38 +24,37 @@ export default function Register() {
   };
 
   return (
-    <div className="register">
-      <span className="registerTitle">Register</span>
-      <form className="registerForm" onSubmit={handleSubmit}>
+    <div className="form-group container">
+      <br/>
+      <br/>
+      <span> <h2>Register</h2></span>
+      <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input
           type="text"
-          className="registerInput"
-          placeholder="Enter Your username"
+          className="form-control"
+          placeholder="Enter Your Username"
           autoFocus={true}
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Email</label>
         <input
           type="text"
-          className="registerInput"
-          placeholder="Enter Your email"
+          className="form-control"
+          placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>
         <input
           type="password"
-          className="registerInput"
+          className="form-control"
           placeholder="Enter Your Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submit">
+        <br/>
+        <br/>
+        <button type="submit">
           Register
-        </button>
-        <button className="loginButton">
-          <Link className="link" to="/login">
-            Login
-          </Link>
         </button>
       </form>
       {error && (
