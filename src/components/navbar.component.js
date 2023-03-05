@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand lg navbar-light bg-info">
       <Link to="/" className="navbar-brand mb-0 h1">GitCredit</Link>
       
-      <div className="container-fluid">
+      <div className="justify-content-end container-fluid">
         {user ? (
           <div>
             <p>Welcome {user.username}</p>
