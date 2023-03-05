@@ -1,72 +1,51 @@
-Krystal Test
+# **Final Project - Restaurant app to track customer credits**
 
-# Getting Started with Create React App
+# Description
+This is an app for restaurants to track credits to customer accounts.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Demo
+![Screenshot](./public/gitcredit.png)
 
-## Available Scripts
+# Technologies
+Front end:
+    Axios
+    react
+    react-dom
+    react-router-dom
+    react-scripts
+    react-share
+    web-vitals
+    nodemon
 
-In the project directory, you can run:
+Back end:
+    bcrypt
+    dotenv
+    express
+    mongoose
+    multer
+    nodemon
+    path
 
-### `npm start`
+# Run the app
+1. clone the respository
+2. run npm i inside the main savings-tracker-1 folder to install all neccessary packages.
+3. use start command nodemon on the backend folder to start the back end, and npm start in the main savings-tracker-1 folder to start the front end.
+4. go to http://localhost:3000 to visit the homepage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# To Do
+1. Fix the Login and Registration forms to connect to the back end.
+2. Develop the Log Out button.
+3. Fix the app so that after login the client will then see their account rather than have the information on the homepage.
+4. Work on additional styling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Issues
+1. login and registration works in the back end, but not in the front end.
+2. The client can see their logged credits and create new credits without logging in. We were trying to route the client to their logged credits and create new credits after successful login. However the login and registration pages do not work, so instead we have the information on the homepage for now.
+3. The logout button isn't linking so the client can't logout.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Developers
+1. Tsilos K.
+2. Krystal M.
+3. Mary C.
+4. Leonel A.
